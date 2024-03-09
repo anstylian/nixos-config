@@ -1,5 +1,3 @@
-# { pkgs, ... }:
-
 {
   programs.browserpass.enable = true;
   programs.firefox = {

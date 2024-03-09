@@ -5,7 +5,6 @@
     ./firefox.nix
     ./font.nix
     ./gtk.nix
-    # ./kdeconnect.nix
     # ./slack.nix
     # ./sublime-music.nix
   ];
