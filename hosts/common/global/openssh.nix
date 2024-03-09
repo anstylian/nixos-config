@@ -12,7 +12,7 @@ let
 in
 {
   services.openssh = {
-    enable = true;
+    enable = false;
     settings = {
       # Harden
       PasswordAuthentication = false;
@@ -21,6 +21,7 @@ in
       StreamLocalBindUnlink = "yes";
       # Allow forwarding ports to everywhere
       GatewayPorts = "clientspecified";
+      X11Forwarding = true;
     };
 
     # hostKeys = [{
