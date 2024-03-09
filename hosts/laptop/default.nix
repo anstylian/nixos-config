@@ -55,8 +55,10 @@
   services.xserver = {
     enable = true;
     # Configure keymap in X11
-    layout = "us, gr";
-    xkbOptions = "grp:alt_shift_toggle";
+    xkb = {
+      layout = "us, gr";
+      options = "grp:alt_shift_toggle";
+    };
     # Enable touchpad support (enabled default in most desktopManager).
     libinput = {
       enable = true;
