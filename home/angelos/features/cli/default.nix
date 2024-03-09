@@ -5,7 +5,7 @@
     ./direnv.nix
     ./github-cli.nix
     ./git.nix
-    ./gpg.nix
+    # ./gpg.nix
     # ./nix-index.nix
     ./pfetch.nix
     # ./shellcolor.nix
