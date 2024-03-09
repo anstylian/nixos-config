@@ -3,6 +3,7 @@
   imports = [
     inputs.home-manager.nixosModules.home-manager
     ./docker.nix
+    ./qemu.nix
     ./fish.nix
     ./locale.nix
     ./nix.nix

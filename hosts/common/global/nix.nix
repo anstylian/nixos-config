@@ -1,4 +1,4 @@
-{ pkgs, inputs, lib, ... }:
+{ inputs, lib, ... }:
 {
   nix = {
     settings = {
