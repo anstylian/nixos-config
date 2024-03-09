@@ -6,7 +6,7 @@ in
     hostName = "nixos-laptop";
   };
 
-  users.mutableUsers = false;
+  users.mutableUsers = true;
   users.users.angelos = {
     isNormalUser = true;
     shell = pkgs.fish;
