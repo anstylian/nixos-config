@@ -69,13 +69,6 @@
           pkgs = pkgsFor.x86_64-linux;
           extraSpecialArgs = { inherit inputs outputs; };
         };
-
-        # Portable minimum configuration
-        "angelos@generic" = lib.homeManagerConfiguration {
-          modules = [ ./home/angelos/generic.nix ];
-          pkgs = pkgsFor.x86_64-linux;
-          extraSpecialArgs = { inherit inputs outputs; };
-        };
       };
     };
 }

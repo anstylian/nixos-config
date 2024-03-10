@@ -8,7 +8,6 @@ in
     inputs.nix-colors.homeManagerModule
     ../features/cli
     ../features/helix
-    # ../features/neovim
   ] ++ (builtins.attrValues outputs.homeManagerModules);
 
   nixpkgs = {
