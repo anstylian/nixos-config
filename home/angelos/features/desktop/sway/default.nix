@@ -178,19 +178,14 @@
     };
     extraConfig = ''
       set $opacity 0.8
-      for_window [class=".*"] opacity 0.95
-      for_window [app_id=".*"] opacity 0.95
+      for_window [class=".*"] opacity 1
+      for_window [app_id=".*"] opacity 1
       for_window [app_id="Alacritty"] opacity 1
       for_window [title="drun"] opacity $opacity
       for_window [app_id="pavucontrol"] floating enable, sticky
       for_window [app_id=".blueman-manager-wrapped"] floating enable
       for_window [title="Picture in picture"] floating enable, move position 1205 634, resize set 700 400, sticky enable
-    ''; # $ swaymsg -t get_tree or get_outputs
-    # extraSessionCommands = ''
-    #   #export WLR_NO_HARDWARE_CURSORS="1";  # Needed for cursor in vm
-    #   export XDG_SESSION_DESKTOP=sway
-    #   export XDG_CURRENT_DESKTOP=sway
-    # '';
+    '';
   };
   home.sessionVariables = {
     XDG_SESSION_DESKTOP = "sway";
