@@ -10,6 +10,7 @@
       # ];
       bookmarks = { };
       settings = {
+        "browser.ctrlTab.sortByRecentlyUsed" = true;
         "browser.disableResetPrompt" = true;
         "browser.download.panel.shown" = true;
         "browser.download.useDownloadDir" = false;
