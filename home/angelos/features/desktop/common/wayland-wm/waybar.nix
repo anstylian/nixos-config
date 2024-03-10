@@ -58,20 +58,10 @@ in
         ] ++ (lib.optionals hasSway [
           "sway/workspaces"
           "sway/mode"
-        ])
-        # ++ (lib.optionals hasHyprland [
-        #   "hyprland/workspaces"
-        #   "hyprland/submap"
-        # ])
-        ++ [
-          "custom/currentplayer"
-          "custom/player"
-        ];
+          "sway/window"
+        ]);
 
         modules-center = [
-          "pulseaudio"
-          "battery"
-          "idle_inhibitor"
           "clock"
           # "custom/unread-mail"
           # "custom/gpg-agent"
@@ -79,6 +69,9 @@ in
 
         modules-right = [
           "network"
+          "pulseaudio"
+          "battery"
+          "idle_inhibitor"
           # "custom/tailscale-ping"
           # TODO: currently broken for some reason
           "custom/gammastep"
@@ -122,7 +115,7 @@ in
           onclick = "";
         };
         "sway/window" = {
-          max-length = 20;
+          max-length = 40;
         };
         network = {
           interval = 3;
@@ -168,7 +161,7 @@ in
             text = "";
             tooltip = ''$(${cat} /etc/os-release | ${grep} PRETTY_NAME | ${cut} -d '"' -f2)'';
           };
-          on-click-left = "${wofi} -S drun -x 10 -y 10 -W 25% -H 60%";
+          on-click = "${wofi} -S drun -x 10 -y 10 -W 25% -H 60%";
           on-click-right = lib.concatStringsSep ";" (
             # (lib.optional hasHyprland "${hyprland}/bin/hyprctl dispatch togglespecialworkspace") ++
             (lib.optional hasSway "${sway}/bin/swaymsg scratchpad show")
