@@ -13,7 +13,7 @@ in
     # ./features/pass
   ];
 
-  wallpaper = ./global/anders-jilden-vhnG50rQtUk-unsplash.jpg;
+  wallpaper = ./global/vector-forest-sunset-forest-sunset-forest-wallpaper-b3abc35d0d699b056fa6b247589b18a8.jpg;
   # colorscheme = if dark-mode then silk-dark else silk-light;
   colorscheme = monokai;
   # colorscheme = silk-dark;
