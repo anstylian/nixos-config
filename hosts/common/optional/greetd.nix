@@ -36,7 +36,7 @@ in
         theme_name = angelosCfg.gtk.theme.name;
       };
       background = {
-        path = "../../../Mountain_andy_betts.png";
+        path = ../../../home/angelos/global/vector-forest-sunset-forest-sunset-forest-wallpaper-b3abc35d0d699b056fa6b247589b18a8.jpg;
         fit = "Cover";
       };
     };
