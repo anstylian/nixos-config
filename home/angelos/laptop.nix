@@ -9,8 +9,8 @@ in
     ./global
     ./features/desktop/wireless
     ./features/desktop/sway
+    ./features/desktop/optional
     # ./features/pass
-    # ./features/desktop/waybar
   ];
 
   wallpaper = ./global/anders-jilden-vhnG50rQtUk-unsplash.jpg;
