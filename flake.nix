@@ -18,6 +18,11 @@
         flake = false;
       };
 
+      sops-nix = {
+        url = "github:Mic92/sops-nix";
+        inputs.nixpkgs.follows = "nixpkgs";
+        inputs.nixpkgs-stable.follows = "nixpkgs";
+      };
       # petclinic = {
       #   # url = "path:/home/angelos/Documents/git/douglas-adams-quotes";
       #   url = "path:/home/angelos/Documents/git/petclinic";

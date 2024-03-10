@@ -6,7 +6,10 @@ in
     hostName = "nixos-laptop";
   };
 
-  users.mutableUsers = true;
+  sops.secrets.angelos-password.neededForUsers = true;
+  sops.secrets.root-password.neededForUsers = true;
+
+  users.mutableUsers = false;
   users.users.angelos = {
     isNormalUser = true;
     shell = pkgs.fish;
@@ -26,9 +29,13 @@ in
       "deluge"
     ];
     openssh.authorizedKeys.keys = [ (builtins.readFile ../../../../home/angelos/ssh.pub) ];
+    hashedPasswordFile = config.sops.secrets.angelos-password.path;
 
     packages = [ pkgs.home-manager ];
   };
+
+
+  users.users.root.hashedPasswordFile = config.sops.secrets.root-password.path;
 
   home-manager.users.angelos = import ../../../../home/angelos/laptop.nix;
 

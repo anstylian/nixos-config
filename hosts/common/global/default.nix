@@ -10,14 +10,18 @@
     ./nix.nix
     ./openssh.nix
     # ./optin-persistence.nix
-    # ./sops.nix
+    ./sops.nix
     # ./systemd-initrd.nix
     # ./ssh-serve-store.nix
     # ./steam-hardware.nix
   ];
 
   environment = {
-    systemPackages = with pkgs; [           # Default packages installed system-wide
+    variables = {
+      EDITOR = "vim";
+    };
+    systemPackages = with pkgs; [
+      # Default packages installed system-wide
       vim
       killall
       pciutils
