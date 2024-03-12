@@ -12,7 +12,7 @@ let
 in
 {
   services.openssh = {
-    enable = false;
+    enable = lib.mkForce false;
     settings = {
       # Harden
       PasswordAuthentication = false;

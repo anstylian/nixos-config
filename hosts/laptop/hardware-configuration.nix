@@ -26,7 +26,7 @@
         consoleMode = "max";
         editor = false;
       };
-      timeout = 5;
+      timeout = lib.mkForce 5;
     };
     kernelPackages = pkgs.linuxPackages_latest;
     supportedFilesystems = [ "ntfs" ];
@@ -64,7 +64,7 @@
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
-# TODO handle the bluetooth
+  # TODO handle the bluetooth
   hardware.bluetooth.enable = true;
 
   services.blueman.enable = true;
