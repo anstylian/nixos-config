@@ -19,6 +19,7 @@
   environment = {
     variables = {
       EDITOR = "vim";
+      TERM = "xterm-256color";
     };
     systemPackages = with pkgs; [
       # Default packages installed system-wide

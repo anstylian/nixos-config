@@ -26,7 +26,6 @@
     nitch             # Minimal fetch
     ranger            # File Manager
     tldr              # Helper
-    ranger            # File browser
     unzip             # Zip files
     zip               # Zip files
     lm_sensors        # Computer temperature sensors

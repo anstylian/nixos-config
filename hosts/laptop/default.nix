@@ -14,15 +14,6 @@
     ../common/optional/yubikey.nix
   ];
 
-  xdg.portal = {
-    enable = true;
-    wlr.enable = true;
-    configPackages = [
-      pkgs.xdg-desktop-portal-wlr
-      pkgs.xdg-desktop-portal-gtk
-    ];
-  };
-
   powerManagement.powertop.enable = true;
   programs = {
     light.enable = true;
@@ -72,6 +63,15 @@
     #   enable = true;
     # };
     displayManager.lightdm.enable = false; # LightDM is enable by default so we disapling it here
+  };
+
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+    configPackages = [
+      pkgs.xdg-desktop-portal-wlr
+      pkgs.xdg-desktop-portal-gtk
+    ];
   };
 
   services.udisks2.enable = true;
