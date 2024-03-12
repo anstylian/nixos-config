@@ -10,6 +10,7 @@ in
     ./features/desktop/wireless
     ./features/desktop/sway
     ./features/desktop/optional
+    ./features/desktop/optional/udiskie.nix
     # ./features/pass
   ];
 

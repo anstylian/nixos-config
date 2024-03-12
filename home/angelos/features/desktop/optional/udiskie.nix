@@ -1,6 +1,7 @@
 #
 # Mounting tool
 #
+{ ... }:
 {
   services = {
     udiskie = {

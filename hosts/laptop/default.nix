@@ -74,6 +74,8 @@
     displayManager.lightdm.enable = false; # LightDM is enable by default so we disapling it here
   };
 
+  services.udisks2.enable = true;
+
   networking.firewall.enable = true;
   system.stateVersion = "23.11";
 }

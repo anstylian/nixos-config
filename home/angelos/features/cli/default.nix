@@ -12,7 +12,6 @@
     ./ssh.nix
     ./starship.nix
     ./neovim
-    ./udiskie.nix
   ];
 
   home.packages = with pkgs; [
