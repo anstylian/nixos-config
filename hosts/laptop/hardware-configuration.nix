@@ -61,11 +61,13 @@
   # networking.interfaces.wlo1.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
 
   # TODO handle the bluetooth
   hardware.bluetooth.enable = true;
+
+  hardware.keyboard.qmk.enable = true;
 
   services.blueman.enable = true;
 }

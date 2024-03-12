@@ -1,11 +1,13 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, modulesPath, ... }: {
   imports = [
+    # "${modulesPath}/installer/cd-dvd/installation-cd-minimal.nix"
     inputs.nixos-hardware.nixosModules.dell-precision-3541
     ./hardware-configuration.nix
 
     ../common/global
     ../common/users/angelos
 
+    ../common/optional/powertop.nix
     ../common/optional/wireless.nix
     ../common/optional/greetd.nix
     ../common/optional/pipewire.nix
