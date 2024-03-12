@@ -110,16 +110,8 @@
         "${modifier}+Shift+Up" = "move up";
         "${modifier}+Shift+Down" = "move down";
 
-        #"Alt+Left" = "workspace prev";                 # Navigate to previous or next workspace if it exists
-        #"Alt+Right" = "workspace next";
         "Alt+Left" = "workspace prev_on_output"; # Navigate to previous or next workspace on output if it exists
         "Alt+Right" = "workspace next_on_output";
-
-        #"Alt+1" = "workspace number 1";                 # Open workspace x
-        #"Alt+2" = "workspace number 2";
-        #"Alt+3" = "workspace number 3";
-        #"Alt+4" = "workspace number 4";
-        #"Alt+5" = "workspace number 5";
 
         "Alt+Shift+Left" = "move container to workspace prev, workspace prev"; # Move container to next available workspace and focus
         "Alt+Shift+Right" = "move container to workspace next, workspace next";
