@@ -14,4 +14,6 @@
     # virtualbox.host.enable = true;
     # virtualbox.host.enableExtensionPack = true;
   };
+
+  programs.virt-manager.enable = true;
 }
