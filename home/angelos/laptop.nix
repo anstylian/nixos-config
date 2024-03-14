@@ -11,6 +11,7 @@ in
     ./features/desktop/sway
     ./features/desktop/optional
     ./features/desktop/optional/udiskie.nix
+    ./features/desktop/optional/virt-manager.nix
     # ./features/pass
   ];
 
