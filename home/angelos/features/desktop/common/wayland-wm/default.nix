@@ -25,6 +25,13 @@
     wl-mirror
     ydotool
     qt5.qtwayland
+
+    # this is to be able to run applications that need sudo and UI
+    # 1. xhost si:localuser:root
+    # do your root staffs
+    # 2. xhost -si:localuser:root
+    # xhost
+    pkgs.xorg.xhost
   ];
 
   home.sessionVariables = {
