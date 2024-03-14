@@ -30,6 +30,7 @@
     };
     kernelPackages = pkgs.linuxPackages_latest;
     supportedFilesystems = [ "ntfs" ];
+    extraModprobeConfig = "options kvm_intel nested=1"; # enable nested virtualization
   };
 
   fileSystems."/" =
