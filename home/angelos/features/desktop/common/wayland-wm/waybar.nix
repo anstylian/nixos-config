@@ -260,13 +260,14 @@ in
         padding: 0 8px;
       }
 
+/*
       window#waybar.top {
         opacity: 0.95;
         padding: 0;
         background-color: #${colors.base00};
         border: 2px solid #${colors.base0C};
       }
-
+*/
       window#waybar {
         color: #${colors.base05};
       }
