@@ -33,13 +33,13 @@ in
     git.enable = true;
   };
 
+
   home = {
     username = lib.mkDefault "angelos";
     homeDirectory = lib.mkDefault "/home/${config.home.username}";
     stateVersion = lib.mkDefault "23.11";
     sessionPath = [ "$HOME/.local/bin" ];
-    sessionVariables = {
-    };
+    sessionVariables = { };
 
     # persistence = {
     #   "/persist/home/angelos" = {
