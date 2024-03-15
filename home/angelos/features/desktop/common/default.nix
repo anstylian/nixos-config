@@ -9,5 +9,6 @@
     feh             # Simple image viewer
     pavucontrol     # Volume control
     cinnamon.nemo-with-extensions
+    chromium
   ];
 }
