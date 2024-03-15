@@ -12,6 +12,7 @@
     ./ssh.nix
     ./starship.nix
     ./neovim
+    ./tmux.nix
   ];
 
   home.packages = with pkgs; [
@@ -45,9 +46,6 @@
     nixfmt            # Nix formatter
 
     ltex-ls           # Spell checking LSP
-
-    vim
-    neovim
 
     ssh-to-age
   ];
