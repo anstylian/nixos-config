@@ -25,6 +25,9 @@
               				      set -g @dracula-show-powerline true
               				      set -g @dracula-refresh-rate 10
               				      set -g @dracula-military-time true
+
+              				      # it can accept `hostname` (full hostname), `session`, `shortname` (short name), `smiley`, `window`, or any character.
+                            set -g @dracula-show-left-icon 
               			      '';
           }
           {
