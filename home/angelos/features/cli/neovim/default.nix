@@ -54,6 +54,7 @@
   };
 in {
   home.packages = with pkgs; [
+    neovim
     nodejs # copilot
     vale
     terraform-ls
