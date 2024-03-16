@@ -37,6 +37,7 @@
     fd                # Better find
     httpie            # Better curl
     diffsitter        # Better diff
+    bat               # Better cat
     tre-command       # Better tree
     dutree            # Better du
     tldr              # Better man
