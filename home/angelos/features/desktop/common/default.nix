@@ -3,6 +3,8 @@
     ./firefox.nix
     ./font.nix
     ./gtk.nix
+    ./discord.nix
+    ./slack.nix
   ];
 
   home.packages = with pkgs; [
