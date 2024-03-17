@@ -11,14 +11,15 @@ in
       fade-in = 0.1;
 
       font = config.fontProfiles.regular.family;
-      font-size = 15;
+      font-size = 24;
 
       line-uses-inside = true;
       disable-caps-lock-text = true;
       indicator-caps-lock = true;
-      indicator-radius = 40;
+      indicator-radius = 100;
+      indicator-thickness = 20;
       indicator-idle-visible = true;
-      indicator-y-position = 1000;
+      show-failed-attempts = true;
 
       ring-color = "#${colors.base02}";
       inside-wrong-color = "#${colors.base08}";

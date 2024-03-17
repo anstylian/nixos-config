@@ -4,7 +4,6 @@ let
   swaylock = "${config.programs.swaylock.package}/bin/swaylock";
   pgrep = "${pkgs.procps}/bin/pgrep";
   pactl = "${pkgs.pulseaudio}/bin/pactl";
-  # hyprctl = "${config.wayland.windowManager.hyprland.package}/bin/hyprctl";
   swaymsg = "${config.wayland.windowManager.sway.package}/bin/swaymsg";
 
   isLocked = "${pgrep} -x ${swaylock}";
@@ -32,23 +31,15 @@ in
         command = "${pactl} set-source-mute @DEFAULT_SOURCE@ yes";
         resumeCommand = "${pactl} set-source-mute @DEFAULT_SOURCE@ no";
       }) ++
-      # Turn off RGB
-      # (lib.optionals config.services.rgbdaemon.enable (afterLockTimeout {
-      #   timeout = 20;
-      #   command = "systemctl --user stop rgbdaemon";
-      #   resumeCommand = "systemctl --user start rgbdaemon";
-      # })) ++
-      # Turn off displays (hyprland)
-      # (lib.optionals config.wayland.windowManager.hyprland.enable (afterLockTimeout {
-      #   timeout = 40;
-      #   command = "${hyprctl} dispatch dpms off";
-      #   resumeCommand = "${hyprctl} dispatch dpms on";
-      # })) ++
       # Turn off displays (sway)
       (lib.optionals config.wayland.windowManager.sway.enable (afterLockTimeout {
         timeout = 40;
         command = "${swaymsg} 'output * dpms off'";
         resumeCommand = "${swaymsg} 'output * dpms on'";
       }));
+    events = [ # Use for laptop lock screen when you close the laptop
+      { event = "before-sleep"; command = "${swaylock} -i ${config.wallpaper} --daemonize"; }
+      { event = "lock"; command = "lock"; }
+    ];
   };
 }
