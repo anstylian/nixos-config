@@ -1,52 +1,26 @@
-{ config, lib, ... }: {
+{ config, ... }: {
   # Wireless secrets stored through sops
-  # sops.secrets.wireless = {   TODO
-  #   sopsFile = ../secrets.yaml;
-  #   neededForUsers = true;
-  # };
+  sops.secrets.wireless-env-file = {
+    neededForUsers = true;
+    sopsFile = ../../../secrets/wifi.yaml;
+  };
 
   networking.wireless = {
     enable = true;
     fallbackToWPA2 = false;
     # Declarative
-    # environmentFile = config.sops.secrets.wireless.path;
-    # networks = {
-    #   "JVGCLARO" = {
-    #     psk = "@JVGCLARO@";
-    #   };
-    #   "Kartodrorealm" = {
-    #     psk = "@KARTODROREALM@";
-    #   };
-    #   "Kartodrorealm-5G" = {
-    #     psk = "@KARTODROREALM@";
-    #   };
-    #   "Marcos_2.4Ghz" = {
-    #     pskRaw = "@MARCOS_24@";
-    #   };
-    #   "Marcos_5Ghz" = {
-    #     pskRaw = "@MARCOS_50@";
-    #   };
-    #   "Misterio" = {
-    #     pskRaw = "@MISTERIO@";
-    #   };
-    #   "VIVOFIBRA-FC41-5G" = {
-    #     pskRaw = "@MARCOS_SANTOS_5G@";
-    #   };
-    #   "zoocha" = {
-    #     pskRaw = "@ZOOCHA@";
-    #   };
-    #   "eduroam" = {
-    #     auth = ''
-    #       key_mgmt=WPA-EAP
-    #       pairwise=CCMP
-    #       auth_alg=OPEN
-    #       eap=PEAP
-    #       identity="10856803@usp.br"
-    #       password="@EDUROAM@"
-    #       phase2="auth=MSCHAPV2"
-    #     '';
-    #   };
-    # };
+    environmentFile = config.sops.secrets.wireless-env-file.path;
+    networks = {
+      "CYTA_tCes_5G" = {
+        psk = "@CYTA_tCes_5G@";
+      };
+      "CYTA_90D8" = {
+        psk = "@CYTA_90D8@";
+      };
+      "CYTA_pHj6" = {
+        psk = "@CYTA_pHj6@";
+      };
+    };
 
     # Imperative
     allowAuxiliaryImperativeNetworks = true;

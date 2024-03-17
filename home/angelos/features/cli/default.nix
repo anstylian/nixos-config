@@ -1,7 +1,6 @@
 { pkgs, ... }: {
   imports = [
     ./bash.nix
-    ./bat.nix
     ./direnv.nix
     ./github-cli.nix
     ./git.nix

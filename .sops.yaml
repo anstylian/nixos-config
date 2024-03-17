@@ -4,3 +4,7 @@ creation_rules:
     key_groups:
       - age:
           - *angelos
+  - path_regex: secrets/wifi.yaml$
+    key_groups:
+      - age:
+          - *angelos
