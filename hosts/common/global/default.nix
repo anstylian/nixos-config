@@ -2,6 +2,7 @@
 { pkgs, inputs, outputs, ... }: {
   imports = [
     inputs.home-manager.nixosModules.home-manager
+    ./auditd.nix
     ./docker.nix
     ./podman.nix
     ./libvirt.nix
@@ -20,6 +21,7 @@
     variables = {
       EDITOR = "vim";
       TERM = "xterm-256color";
+      TERMINAL = "alacritty";
     };
     systemPackages = with pkgs; [
       # Default packages installed system-wide
