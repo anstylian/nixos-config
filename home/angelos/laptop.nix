@@ -8,7 +8,7 @@ in
   imports = [
     ./global
     ./features/desktop/wireless
-    ./features/desktop/sway
+    ./features/desktop/sway.nix
     ./features/desktop/optional
     ./features/desktop/optional/udiskie.nix
     ./features/desktop/optional/virt-manager.nix
