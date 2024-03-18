@@ -54,14 +54,11 @@
     # Enable touchpad support (enabled default in most desktopManager).
     libinput = {
       enable = true;
-      # touchpad = {
-      #   tapping = true;
-      #   clickMethod = "clickfinger";
-      # };
+      touchpad = {
+        tapping = true;
+        clickMethod = "clickfinger";
+      };
     };
-    # synaptics = {
-    #   enable = true;
-    # };
     displayManager.lightdm.enable = false; # LightDM is enable by default so we disapling it here
   };
 
