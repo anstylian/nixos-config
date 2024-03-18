@@ -43,6 +43,7 @@
         };
         "type:keyboard" = {
           xkb_layout = "us,gr";
+          xkb_options = "grp:alt_shift_toggle";
           xkb_numlock = "enabled";
         };
       };
