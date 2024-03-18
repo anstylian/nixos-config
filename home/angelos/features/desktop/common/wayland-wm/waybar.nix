@@ -68,6 +68,7 @@ in
         ];
 
         modules-right = [
+          "tray"
           "network"
           "pulseaudio"
           "battery"
@@ -75,7 +76,7 @@ in
           # "custom/tailscale-ping"
           # TODO: currently broken for some reason
           "custom/gammastep"
-          "tray"
+          "sway/language"
           "custom/hostname"
         ];
 
@@ -88,6 +89,7 @@ in
             <big>{:%Y %B}</big>
             <tt><small>{calendar}</small></tt>'';
         };
+
         pulseaudio = {
           format = "{icon}  {volume}%";
           format-muted = "   0%";
@@ -99,6 +101,7 @@ in
           };
           on-click = pavucontrol;
         };
+
         idle_inhibitor = {
           format = "{icon}";
           format-icons = {
@@ -106,6 +109,7 @@ in
             "deactivated" = "";
           };
         };
+
         battery = {
           bat = "BAT0";
           interval = 10;
@@ -114,9 +118,15 @@ in
           format-charging = "󰂄 {capacity}%";
           onclick = "";
         };
+
         "sway/window" = {
           max-length = 40;
         };
+
+        "sway/language" = {
+          "tooltip" = false;
+        };
+
         network = {
           interval = 3;
           format-wifi = "   {essid}";
@@ -129,6 +139,7 @@ in
             Down: {bandwidthDownBits}'';
           on-click = "";
         };
+
         # "custom/tailscale-ping" = {
         #   interval = 10;
         #   return-type = "json";
@@ -155,6 +166,7 @@ in
         #   format = "{}";
         #   on-click = "";
         # };
+
         "custom/menu" = {
           return-type = "json";
           exec = jsonOutput "menu" {
@@ -168,10 +180,12 @@ in
           );
 
         };
+
         "custom/hostname" = {
           exec = "echo $USER@$HOSTNAME";
           on-click = "${systemctl} --user restart waybar";
         };
+
         # "custom/unread-mail" = {
         #   interval = 5;
         #   return-type = "json";
@@ -215,6 +229,7 @@ in
         #   };
         #   on-click = "";
         # };
+
         "custom/gammastep" = {
           interval = 5;
           return-type = "json";
@@ -246,7 +261,6 @@ in
           on-click = "${systemctl} --user is-active gammastep && ${systemctl} --user stop gammastep || ${systemctl} --user start gammastep";
         };
       };
-
     };
     # Cheatsheet:
     # x -> all sides
@@ -254,75 +268,75 @@ in
     # x y z -> top, horizontal, bottom
     # w x y z -> top, right, bottom, left
     style = let inherit (config.colorscheme) colors; in /* css */ ''
-      * {
-        font-family: ${config.fontProfiles.regular.family}, ${config.fontProfiles.monospace.family};
-        font-size: 12pt;
-        padding: 0 8px;
-      }
+            * {
+              font-family: ${config.fontProfiles.regular.family}, ${config.fontProfiles.monospace.family};
+              font-size: 12pt;
+              padding: 0 8px;
+            }
 
-/*
-      window#waybar.top {
-        opacity: 0.95;
-        padding: 0;
-        background-color: #${colors.base00};
-        border: 2px solid #${colors.base0C};
-      }
-*/
-      window#waybar {
-        color: #${colors.base05};
-      }
+      /*
+            window#waybar.top {
+              opacity: 0.95;
+              padding: 0;
+              background-color: #${colors.base00};
+              border: 2px solid #${colors.base0C};
+            }
+      */
+            window#waybar {
+              color: #${colors.base05};
+            }
 
-      #workspaces button {
-        background-color: #${colors.base01};
-        color: #${colors.base05};
-        padding: 5px 1px;
-        margin: 3px 0;
-      }
-      #workspaces button.hidden {
-        background-color: #${colors.base00};
-        color: #${colors.base04};
-      }
-      #workspaces button.focused,
-      #workspaces button.active {
-        background-color: #285577;
-        color: #${colors.base07};
-      }
+            #workspaces button {
+              background-color: #${colors.base01};
+              color: #${colors.base05};
+              padding: 5px 1px;
+              margin: 3px 0;
+            }
+            #workspaces button.hidden {
+              background-color: #${colors.base00};
+              color: #${colors.base04};
+            }
+            #workspaces button.focused,
+            #workspaces button.active {
+              background-color: #285577;
+              color: #${colors.base07};
+            }
 
 
-      #clock {
-        background-color: #${colors.base04};
-        color: #${colors.base00};
-        padding-left: 15px;
-        padding-right: 15px;
-        margin-top: 0;
-        margin-bottom: 0;
-        border-radius: 10px;
-      }
+            #clock {
+              background-color: #${colors.base04};
+              color: #${colors.base00};
+              padding-left: 15px;
+              padding-right: 15px;
+              margin-top: 0;
+              margin-bottom: 0;
+              border-radius: 10px;
+            }
 
-      #custom-menu {
-        background-color: #${colors.base04};
-        color: #${colors.base00};
-        padding-left: 15px;
-        padding-right: 22px;
-        margin: 0;
-        border-radius: 10px;
-      }
-      #custom-hostname {
-        background-color: #${colors.base04};
-        color: #${colors.base00};
-        padding-left: 15px;
-        padding-right: 18px;
-        margin-right: 0;
-        margin-top: 0;
-        margin-bottom: 0;
-        border-radius: 10px;
-      }
-      #custom-currentplayer {
-        padding-right: 0;
-      }
-      #tray {
-        color: #${colors.base05};
-      }
+            #custom-menu {
+              background-color: #${colors.base04};
+              color: #${colors.base00};
+              padding-left: 15px;
+              padding-right: 22px;
+              margin: 0;
+              border-radius: 10px;
+            }
+            #custom-hostname {
+              background-color: #${colors.base04};
+              color: #${colors.base00};
+              padding-left: 15px;
+              padding-right: 18px;
+              margin-right: 0;
+              margin-top: 0;
+              margin-bottom: 0;
+              border-radius: 10px;
+            }
+            #custom-currentplayer {
+              padding-right: 0;
+            }
+            #tray {
+              color: #${colors.base05};
+            }
     '';
   };
 }
