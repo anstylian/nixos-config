@@ -35,7 +35,7 @@
       input = {
         # Input modules: $ man sway-input
         "type:touchpad" = {
-          tap = "disabled";
+          tap = "enabled";
           dwt = "enabled";
           scroll_method = "two_finger";
           middle_emulation = "enabled";
