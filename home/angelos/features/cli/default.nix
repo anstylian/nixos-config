@@ -46,6 +46,9 @@
 
     ltex-ls           # Spell checking LSP
 
-    ssh-to-age
+    ssh-to-age        # Convert ssh private keys in ed25519 format to age keys
+    keyutils          # Tools used to control the Linux kernel key management system
+
+    cloc              # Count Lines of Code
   ];
 }
