@@ -41,6 +41,8 @@
     dutree            # Better du
     tldr              # Better man
 
+    man-pages         # man-pages
+
     nil               # Nix LSP
     nixfmt            # Nix formatter
 
