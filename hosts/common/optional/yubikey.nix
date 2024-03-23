@@ -7,6 +7,8 @@
     gnupg
     yubico-pam
     yubioath-flutter
+    yubikey-personalization
+    yubikey-personalization-gui
     age-plugin-yubikey
   ];
 }
