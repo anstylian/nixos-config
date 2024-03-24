@@ -11,7 +11,7 @@
     ./ssh.nix
     ./starship.nix
     ./neovim
-    ./tmux
+    ./tmux.nix
   ];
 
   home.packages = with pkgs; [
