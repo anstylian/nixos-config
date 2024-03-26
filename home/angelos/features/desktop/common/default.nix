@@ -12,5 +12,7 @@
     pavucontrol     # Volume control
     cinnamon.nemo-with-extensions
     chromium
+    libreoffice
+    drawing         # edit image files
   ];
 }
