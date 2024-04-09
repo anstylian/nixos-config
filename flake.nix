@@ -13,11 +13,6 @@
 
       nix-colors.url = "github:misterio77/nix-colors";
 
-      astro-nvim = {
-        url = "github:AstroNvim/AstroNvim";
-        flake = false;
-      };
-
       sops-nix = {
         url = "github:Mic92/sops-nix";
         inputs.nixpkgs.follows = "nixpkgs";
