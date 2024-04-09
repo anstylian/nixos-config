@@ -10,11 +10,11 @@
     # ./shellcolor.nix
     ./ssh.nix
     ./starship.nix
-    ./neovim
     ./tmux.nix
   ];
 
   home.packages = with pkgs; [
+    neovim
     comma             # Install and run programs by sticking a , before them
     distrobox         # Nice escape hatch, integrates docker images with my environment
 
