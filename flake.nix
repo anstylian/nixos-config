@@ -13,6 +13,12 @@
 
       nix-colors.url = "github:misterio77/nix-colors";
 
+      # TODO: update to astro-nvim 4
+      astro-nvim = {
+        url = "github:AstroNvim/AstroNvim/c719b16bd1d9710bc0d7dd73ea81985a3cc4024d";
+        flake = false;
+      };
+
       sops-nix = {
         url = "github:Mic92/sops-nix";
         inputs.nixpkgs.follows = "nixpkgs";

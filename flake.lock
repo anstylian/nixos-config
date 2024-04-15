@@ -1,5 +1,22 @@
 {
   "nodes": {
+    "astro-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1705188972,
+        "narHash": "sha256-2qWivfFBdTvW9kppIYSYkDfHkI7PBr47bnWzmp3mCI0=",
+        "owner": "AstroNvim",
+        "repo": "AstroNvim",
+        "rev": "c719b16bd1d9710bc0d7dd73ea81985a3cc4024d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "AstroNvim",
+        "repo": "AstroNvim",
+        "rev": "c719b16bd1d9710bc0d7dd73ea81985a3cc4024d",
+        "type": "github"
+      }
+    },
     "base16-schemes": {
       "flake": false,
       "locked": {
@@ -104,6 +121,7 @@
     },
     "root": {
       "inputs": {
+        "astro-nvim": "astro-nvim",
         "home-manager": "home-manager",
         "nix-colors": "nix-colors",
         "nixos-hardware": "nixos-hardware",
