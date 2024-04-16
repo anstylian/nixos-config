@@ -4,7 +4,6 @@
     ./direnv.nix
     ./github-cli.nix
     ./git.nix
-    ./neovim
     # ./gpg.nix
     # ./nix-index.nix
     ./pfetch.nix
