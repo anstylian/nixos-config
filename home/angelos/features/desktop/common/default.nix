@@ -14,5 +14,6 @@
     chromium
     libreoffice
     drawing         # edit image files
+    vscode
   ];
 }
