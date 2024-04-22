@@ -2,7 +2,7 @@
 #  Sway Home manager configuration
 #
 
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 {
   imports = [
@@ -50,7 +50,7 @@
 
       output = {
         # "*".bg = "~/.config/ARTISTIC-COLORFUL-AI-LANDSCAPE-1192023.png fill";#
-        "*".bg = "$HOME/.config/wallpaper.jpg fill";
+        "*".bg = "${config.wallpaper} fill";
         "*".scale = "1";
         # "eDP-1" = {
         #   res = "1920x1080";
