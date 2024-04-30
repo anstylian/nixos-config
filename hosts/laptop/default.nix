@@ -43,6 +43,16 @@
   #   };
   # };
 
+
+  # Enable touchpad support (enabled default in most desktopManager).
+  services.libinput = {
+    enable = true;
+    touchpad = {
+      tapping = true;
+      clickMethod = "clickfinger";
+    };
+  };
+
   # TODO adapte this one
   services.xserver = {
     enable = true;
@@ -50,14 +60,6 @@
     xkb = {
       layout = "us, gr";
       options = "grp:alt_shift_toggle";
-    };
-    # Enable touchpad support (enabled default in most desktopManager).
-    libinput = {
-      enable = true;
-      touchpad = {
-        tapping = true;
-        clickMethod = "clickfinger";
-      };
     };
     displayManager.lightdm.enable = false; # LightDM is enable by default so we disapling it here
   };
