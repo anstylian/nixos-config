@@ -44,7 +44,7 @@
     man-pages         # man-pages
 
     nil               # Nix LSP
-    nixfmt            # Nix formatter
+    nixfmt-classic    # Nix formatter
 
     ltex-ls           # Spell checking LSP
 
