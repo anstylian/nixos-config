@@ -177,7 +177,8 @@
       for_window [title="drun"] opacity $opacity
       for_window [app_id="pavucontrol"] floating enable, sticky
       for_window [app_id="wpa_gui"] floating enable, sticky
-      for_window [app_id=".blueman-manager-wrapped"] floating enable
+      for_window [app_id="blueberry"] floating enable
+      for_window [app_id="wdisplays"] floating enable, resize set 700 400
       for_window [title="Picture in picture"] floating enable, move position 1205 634, resize set 700 400, sticky enable
     '';
   };

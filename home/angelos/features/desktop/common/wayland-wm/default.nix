@@ -26,6 +26,11 @@
     ydotool
     qt5.qtwayland
 
+    kanshi
+    wdisplays
+    wl-clipboard
+    blueberry
+
     # this is to be able to run applications that need sudo and UI
     # 1. xhost si:localuser:root
     # do your root staffs
