@@ -19,12 +19,6 @@
         inputs.nixpkgs-stable.follows = "nixpkgs";
       };
 
-      # petclinic = {
-      #   # url = "path:/home/angelos/Documents/git/douglas-adams-quotes";
-      #   url = "path:/home/angelos/Documents/git/petclinic";
-      #   inputs.nixpkgs.follows = "nixpkgs";
-      # };
-
       # firefox-addons = {
       #   url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       #   inputs.nixpkgs.follows = "nixpkgs";
