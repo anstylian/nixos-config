@@ -5,6 +5,7 @@
     ./gtk.nix
     ./discord.nix
     ./slack.nix
+    ./galculator.nix
   ];
 
   home.packages = with pkgs; [
