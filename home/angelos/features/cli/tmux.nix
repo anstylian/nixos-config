@@ -10,7 +10,6 @@
       baseIndex = 1;
       plugins = with pkgs.tmuxPlugins ;
         [
-          sensible
           yank
           tmux-thumbs
           fuzzback
