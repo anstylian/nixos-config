@@ -8,6 +8,7 @@
       historyLimit = 100000;
       clock24 = true;
       baseIndex = 1;
+      escapeTime = 100;
       plugins = with pkgs.tmuxPlugins ;
         [
           yank
@@ -39,6 +40,9 @@
       extraConfig = ''
         bind-key '"' split-window -c "#{pane_current_path}"
         bind-key % split-window -h -c "#{pane_current_path}"
+
+        # enable true color
+        set -as terminal-overrides ",alacritty*:Tc"
       '';
     };
   };
