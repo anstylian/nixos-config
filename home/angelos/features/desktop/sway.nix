@@ -15,7 +15,7 @@
     config = rec {
       # Sway configuration
       modifier = "Mod4";
-      terminal = "${pkgs.alacritty}/bin/alacritty";
+      terminal = "${pkgs.alacritty}/bin/alacritty -e tmux";
       menu = "${pkgs.wofi}/bin/wofi --show drun";
 
       bars = [ ]; # No bar because using Waybar
@@ -173,7 +173,6 @@
       set $opacity 0.8
       for_window [class=".*"] opacity 1
       for_window [app_id=".*"] opacity 1
-      for_window [app_id="Alacritty"] opacity 1
       for_window [title="drun"] opacity $opacity
       for_window [app_id="pavucontrol"] floating enable, sticky
       for_window [app_id="wpa_gui"] floating enable, sticky
