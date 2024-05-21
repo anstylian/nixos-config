@@ -71,4 +71,6 @@
   hardware.keyboard.qmk.enable = true;
 
   services.blueman.enable = true;
+
+  services.acpid.enable = true;
 }
