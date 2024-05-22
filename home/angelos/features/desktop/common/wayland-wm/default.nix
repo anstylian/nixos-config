@@ -3,6 +3,7 @@
   imports = [
     ./gammastep.nix
     ./alacritty.nix
+    ./kanshi.nix
     ./mako.nix
     ./swayidle.nix
     ./swaylock.nix
@@ -26,7 +27,6 @@
     ydotool
     qt5.qtwayland
 
-    kanshi
     wdisplays
     wl-clipboard
     blueberry
