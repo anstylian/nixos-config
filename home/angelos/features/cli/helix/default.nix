@@ -10,7 +10,7 @@ in
       theme = "${colorscheme.slug}";
       editor = {
         color-modes = true;
-        line-number = "relative";
+        line-number = "absolute";
         indent-guides.render = true;
         cursor-shape = {
           normal = "block";

@@ -2,15 +2,13 @@
   imports = [
     ./bash.nix
     ./direnv.nix
-    ./github-cli.nix
     ./git.nix
-    # ./gpg.nix
-    # ./nix-index.nix
+    ./nix-index.nix
     ./pfetch.nix
-    # ./shellcolor.nix
     ./ssh.nix
     ./starship.nix
     ./tmux.nix
+    ./helix
     ./neovim
   ];
 
