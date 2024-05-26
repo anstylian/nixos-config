@@ -3,6 +3,8 @@
   lib,
   ...
 }: {
+  # how to use?
+  # nix-locate 'bin/hello'
   programs.nix-index.enable = true;
 
   systemd.user.services.nix-index-database-sync = {
