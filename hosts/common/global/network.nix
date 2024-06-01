@@ -1,6 +1,7 @@
-{...}:
+{lib, ...}:
 {
-  systemd.network.enable = true;
-  # connman will be enable
-  # boot.initrd.systemd.network.wait-online.enable = false;
+  networking.networkmanager.enable = true;
+  networking.networkmanager.wifi.powersave = true;
+
+  networking.useDHCP = lib.mkDefault true;
 }
