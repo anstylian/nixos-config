@@ -8,7 +8,6 @@
     ../common/users/angelos
 
     ../common/optional/powertop.nix
-    ../common/optional/wireless.nix
     ../common/optional/greetd.nix
     ../common/optional/pipewire.nix
     ../common/optional/yubikey.nix
@@ -75,6 +74,10 @@
 
   services.udisks2.enable = true;
 
-  networking.firewall.enable = true;
+  networking = {
+    firewall.enable = true;
+    hostName = "nixos-laptop";
+  };
+
   system.stateVersion = "23.11";
 }

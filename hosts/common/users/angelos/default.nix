@@ -2,10 +2,6 @@
 let ifTheyExist = groups: builtins.filter (group: builtins.hasAttr group config.users.groups) groups;
 in
 {
-  networking = {
-    hostName = "nixos-laptop";
-  };
-
   sops.secrets.angelos-password.neededForUsers = true;
   sops.secrets.root-password.neededForUsers = true;
 
@@ -18,6 +14,7 @@ in
       "video"
       "audio"
     ] ++ ifTheyExist [
+      "networkmanager"
       "network"
       "wireshark"
       "i2c"
