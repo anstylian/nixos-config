@@ -11,6 +11,7 @@
     ../common/optional/greetd.nix
     ../common/optional/pipewire.nix
     ../common/optional/yubikey.nix
+    ../common/optional/keyboard.nix
   ];
 
   powerManagement.powertop.enable = true;
