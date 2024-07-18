@@ -16,5 +16,7 @@
     libreoffice
     drawing         # edit image files
     vscode
+    keymapp
+    # zsa keyboards
   ];
 }

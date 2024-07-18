@@ -5,10 +5,10 @@
   };
 
   environment.systemPackages = with pkgs; [
-     via
-     qmk
+    qmk
+     # via
   ];
 
-  services.udev.packages = with pkgs; [ via ];
+  # services.udev.packages = with pkgs; [ via ];
 }
 

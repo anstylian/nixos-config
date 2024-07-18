@@ -44,12 +44,12 @@ in {
     nodejs # copilot
     vale
     terraform-ls
-    nodePackages.pyright
+    pyright
     sumneko-lua-language-server
 
     gopls
     golangci-lint
-    nodePackages.bash-language-server
+    bash-language-server
     taplo-lsp
     marksman
     rust-analyzer

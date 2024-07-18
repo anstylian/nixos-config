@@ -24,6 +24,7 @@ in
       "git"
       "libvirtd"
       "deluge"
+      "adbusers"
     ];
     openssh.authorizedKeys.keys = [ (builtins.readFile ../../../../home/angelos/ssh.pub) ];
     hashedPasswordFile = config.sops.secrets.angelos-password.path;
