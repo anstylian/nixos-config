@@ -11,7 +11,7 @@
   home.packages = with pkgs; [
     feh             # Simple image viewer
     pavucontrol     # Volume control
-    cinnamon.nemo-with-extensions
+    nemo-with-extensions
     chromium
     libreoffice
     drawing         # edit image files
