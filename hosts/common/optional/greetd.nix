@@ -30,17 +30,17 @@ in
 
   programs.regreet = {
     enable = true;
-    settings = {
-      GTK = {
-        icon_theme_name = "Papirus";
-        theme_name = angelosCfg.gtk.theme.name;
-      };
-      background = {
-        path = ../../../home/angelos/global/vector-forest-sunset-forest-sunset-forest-wallpaper-b3abc35d0d699b056fa6b247589b18a8.jpg;
-        fit = "Cover";
-      };
+    iconTheme.package = pkgs.papirus-icon-theme;
+    theme.package = pkgs.gnome-themes-extra;
+    font.package = pkgs.fira-code;
+    cursorTheme.name = "Papirus";
+    cursorTheme.package = pkgs.papirus-icon-theme;
+    settings.background = {
+      path = ../../../home/angelos/global/vector-forest-sunset-forest-sunset-forest-wallpaper-b3abc35d0d699b056fa6b247589b18a8.jpg;
+      fit = "Cover";
     };
   };
+
   services.greetd = {
     enable = true;
     settings.default_session.command = sway-kiosk (lib.getExe config.programs.regreet.package);
