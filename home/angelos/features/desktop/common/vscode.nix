@@ -1,16 +1,25 @@
-{ pkgs }:
+{ pkgs, ... }:
 {
   programs.vscode = {
     enable = true;
-    package = pkgs.vscodium;
+    # package = pkgs.vscodium;
     extensions = with pkgs.vscode-extensions; [
-      rust-lang.rust-analyzer 
+      dracula-theme.theme-dracula
+      rust-lang.rust-analyzer
       yzhang.markdown-all-in-one
       ms-vsliveshare.vsliveshare
       ms-vscode.cpptools
       ms-vscode.cmake-tools
-      b4dm4n.vscode-nixpkgs-fmt
       vadimcn.vscode-lldb
+      jnoortheen.nix-ide
+    ]
+    ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+      {
+        name = "leo-extension";
+        publisher = "aleohq";
+        version = "0.32.1";
+        sha256 = "sha256-aY89FHGGAmymiDWBUWbOqyWVs3VEDDWnSBEHl/kOURQ=";
+      }
     ];
   };
 }

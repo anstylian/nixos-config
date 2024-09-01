@@ -6,6 +6,7 @@
     ./discord.nix
     ./slack.nix
     ./galculator.nix
+    ./vscode.nix
   ];
 
   home.packages = with pkgs; [
@@ -15,7 +16,6 @@
     chromium
     libreoffice
     drawing         # edit image files
-    vscode
     keymapp
     # zsa keyboards
   ];
