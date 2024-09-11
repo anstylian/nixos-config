@@ -30,11 +30,11 @@ in
 
   programs.regreet = {
     enable = true;
-    iconTheme.package = pkgs.papirus-icon-theme;
-    theme.package = pkgs.gnome-themes-extra;
-    font.package = pkgs.fira-code;
-    cursorTheme.name = "Papirus";
-    cursorTheme.package = pkgs.papirus-icon-theme;
+    iconTheme.package = pkgs.canta-theme;
+    theme.package = pkgs.canta-theme;
+    font.package = pkgs.roboto-mono;
+    cursorTheme.name = "Canta";
+    cursorTheme.package = pkgs.canta-theme;
     settings.background = {
       path = ../../../home/angelos/global/vector-forest-sunset-forest-sunset-forest-wallpaper-b3abc35d0d699b056fa6b247589b18a8.jpg;
       fit = "Cover";
