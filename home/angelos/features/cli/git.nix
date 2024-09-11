@@ -16,6 +16,8 @@
       # user.signing.key = "TODO";
       # commit.gpgSign = true;
       # gpg.program = "${config.programs.gpg.package}/bin/gpg2";
+      difftool = { prompt = true; };
+      diff = { tool = "${pkgs.meld}/bin/meld"; };
     };
     lfs.enable = true;
     ignores = [ ".direnv" "result" "result-bin" ];
