@@ -17,6 +17,7 @@
     libreoffice
     drawing         # edit image files
     keymapp
+    meld
     # zsa keyboards
   ];
 }
