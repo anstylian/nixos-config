@@ -14,6 +14,7 @@
       jnoortheen.nix-ide
       mkhl.direnv
       vadimcn.vscode-lldb
+      dbaeumer.vscode-eslint
     ]
     ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       {
@@ -22,12 +23,12 @@
         version = "0.32.1";
         sha256 = "sha256-aY89FHGGAmymiDWBUWbOqyWVs3VEDDWnSBEHl/kOURQ=";
       }
-      # {
-      #   name = "esbuild-problem-matchers";
-      #   publisher = "connor4312";
-      #   version = "0.0.3";
-      #   sha256 = "sha256-esLqld9bTlFJ9/qx4qlIx1F3MtMZpr8G9/FMqGvAvtg=";
-      # }
+      {
+        name = "esbuild-problem-matchers";
+        publisher = "connor4312";
+        version = "0.0.3";
+        sha256 = "sha256-esLqld9bTlFJ9/qx4qlIx1F3MtMZpr8G9/FMqGvAvtg=";
+      }
       {
         name = "mock-debug";
         publisher = "ms-vscode";

@@ -43,8 +43,8 @@
 
       homeManagerModules = import ./modules/home-manager;
 
-      devShells = forEachSystem (pkgs: import ./shell.nix { inherit pkgs; });
-      formatter = forEachSystem (pkgs: pkgs.nixpkgs-fmt);
+      # devShells = forEachSystem (pkgs: import ./shell.nix { inherit pkgs; });
+      # formatter = forEachSystem (pkgs: pkgs.nixpkgs-fmt);
 
       nixosConfigurations = {
         laptop = lib.nixosSystem {
