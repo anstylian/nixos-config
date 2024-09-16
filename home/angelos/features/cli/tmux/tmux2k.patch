@@ -1,0 +1,20 @@
+diff --git a/scripts/tmux2k.sh b/scripts/tmux2k.sh
+index 16a5168..21dc6ac 100755
+--- a/scripts/tmux2k.sh
++++ b/scripts/tmux2k.sh
+@@ -52,8 +52,13 @@ declare -A plugin_colors=(
+
+ get_plugin_colors() {
+     local plugin_name="$1"
+-    local default_colors="${plugin_colors[$plugin_name]}"
+-    get_tmux_option "@tmux2k-${plugin_name}-colors" "$default_colors"
++    echo "-->$1<--" > file.txt
++    echo "-->$plugin_name<--" >> file.txt
++    printf '>%s\n' "${plugin_name[@]}" >> file.txt
++    if [[ -v plugin_colors["$plugin_name"] ]]; then
++        local default_colors=${plugin_colors["$plugin_name"]}
++        get_tmux_option "@tmux2k-${plugin_name}-colors" "$default_colors"
++    fi
+ }
+
+ get_plugin_bg() {
