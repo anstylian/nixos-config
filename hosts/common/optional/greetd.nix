@@ -28,6 +28,10 @@ in
     createHome = true;
   };
 
+  # systemPackages = with pkgs; [
+  #   canta-theme
+  # ];
+
   programs.regreet = {
     enable = true;
     iconTheme.package = pkgs.canta-theme;
@@ -35,9 +39,17 @@ in
     font.package = pkgs.roboto-mono;
     cursorTheme.name = "Canta";
     cursorTheme.package = pkgs.canta-theme;
-    settings.background = {
-      path = ../../../home/angelos/global/vector-forest-sunset-forest-sunset-forest-wallpaper-b3abc35d0d699b056fa6b247589b18a8.jpg;
-      fit = "Cover";
+    settings = {
+      GTK = {
+        application_prefer_dark_theme = true;
+        # font_name = "Roboto";
+        # icon_theme_name = "";
+        theme_name = lib.mkForce "Canta";
+      };
+      background = {
+        path = ../../../home/angelos/global/vector-forest-sunset-forest-sunset-forest-wallpaper-b3abc35d0d699b056fa6b247589b18a8.jpg;
+        fit = "Cover";
+      };
     };
   };
 
