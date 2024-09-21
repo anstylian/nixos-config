@@ -22,6 +22,7 @@
               set -g @dracula-plugins "git battery time"
 
               set -g @dracula-show-battery true
+              set -g @dracula-battery-label "󰂇 "
               set -g @dracula-show-powerline true
               set -g @dracula-refresh-rate 10
               set -g @dracula-military-time true
