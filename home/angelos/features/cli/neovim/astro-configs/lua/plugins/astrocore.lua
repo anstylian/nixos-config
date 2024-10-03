@@ -68,5 +68,20 @@ return {
         -- ["<C-S>"] = false,
       },
     },
+    autocmds = {
+      custom_auto_cmd = {
+        {
+          -- enable line wrap
+          -- enable spellcheck
+          -- for markdown and text files
+          event = "FileType",
+          pattern = { "markdown", "text" },
+          callback = function()
+            vim.opt_local.wrap = true
+            vim.opt_local.spell = true
+          end,
+        },
+      },
+    },
   },
 }

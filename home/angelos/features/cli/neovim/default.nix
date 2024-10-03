@@ -36,6 +36,7 @@
     "perl"
     "make"
     "toml"
+    "solidity"
   ];
 in {
   home.packages = with pkgs; [
@@ -45,7 +46,7 @@ in {
     vale
     terraform-ls
     pyright
-    sumneko-lua-language-server
+    lua-language-server
 
     gopls
     golangci-lint
@@ -61,6 +62,7 @@ in {
     black
     ruff
     nixpkgs-fmt
+    nixd
     terraform-ls
     clang-tools
     nodePackages.prettier
@@ -68,7 +70,6 @@ in {
     # based on https://github.com/ray-x/go.nvim#go-binaries-install-and-update
     go
     gofumpt
-    gomodifytags
     gotools
     delve
     golines
@@ -80,6 +81,7 @@ in {
     ginkgo
     richgo
     govulncheck
+    solc
 
     deno
     lazygit
@@ -87,7 +89,8 @@ in {
   ];
 
   xdg.dataHome = "${config.home.homeDirectory}/.data";
-  xdg.dataFile."nvim/lazy/telescope-fzf-native.nvim/build/libfzf.so".source = "${pkgs.vimPlugins.telescope-fzf-native-nvim}/build/libfzf.so";
+  xdg.dataFile."nvim/lib/libfzf.so".source = "${pkgs.vimPlugins.telescope-fzf-native-nvim}/build/libfzf.so";
+  # xdg.dataFile."nvim/lazy/telescope-fzf-native.nvim/build/libfzf.so".source = "${pkgs.vimPlugins.telescope-fzf-native-nvim}/build/libfzf.so";
 
   xdg.configFile.nvim.recursive = true;
   # astro-configs is a clone of https://github.com/AstroNvim/template
