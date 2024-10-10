@@ -2,12 +2,12 @@
   fontProfiles = {
     enable = true;
     monospace = {
-      family = "FiraCode Nerd Font";
-      package = pkgs.nerdfonts.override { fonts = [ "FiraCode" ]; };
+      name = "Hurmit Nerd Font";
+      package = pkgs.nerdfonts.override { fonts = [ "Hermit" ]; };
     };
     regular = {
-      family = "Fira Sans";
-      package = pkgs.fira;
+      name = "Hermit";
+      package = pkgs.hermit;
     };
   };
 }

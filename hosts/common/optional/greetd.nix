@@ -36,7 +36,7 @@ in
     enable = true;
     iconTheme.package = pkgs.canta-theme;
     theme.package = pkgs.canta-theme;
-    font.package = pkgs.roboto-mono;
+    font.package = pkgs.hermit;
     cursorTheme.name = "Canta";
     cursorTheme.package = pkgs.canta-theme;
     settings = {

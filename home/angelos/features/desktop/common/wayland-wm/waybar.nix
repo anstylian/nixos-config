@@ -242,7 +242,7 @@ in
     # w x y z -> top, right, bottom, left
     style = let inherit (config.colorscheme) colors; in /* css */ ''
             * {
-              font-family: ${config.fontProfiles.regular.family}, ${config.fontProfiles.monospace.family};
+              font-family: ${config.fontProfiles.regular.name}, ${config.fontProfiles.monospace.name};
               font-size: 12pt;
               padding: 0 8px;
             }

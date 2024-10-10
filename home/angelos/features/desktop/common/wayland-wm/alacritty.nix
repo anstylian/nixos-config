@@ -1,11 +1,20 @@
-{
-  home.sessionVariables = {
-    TERMINAL = "alacritty";
-  };
+{ config, ... }: {
+  home.sessionVariables = { TERMINAL = "alacritty"; };
 
   programs.alacritty = {
     enable = true;
     settings = {
+      font = {
+        normal = {
+          family = "Hurmit Nerd Font";
+          style = "medium";
+        };
+        size = 12;
+        offset = {
+          x = 0;
+          y = 0;
+        };
+      };
       colors = {
         # Default colors
         primary = {

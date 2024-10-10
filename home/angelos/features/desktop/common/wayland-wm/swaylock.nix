@@ -7,7 +7,7 @@ in
     enable = true;
     package = pkgs.swaylock-effects;
     settings = {
-      font = config.fontProfiles.regular.family;
+      font = config.fontProfiles.regular.name;
       font-size = 24;
 
       line-uses-inside = true;

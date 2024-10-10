@@ -10,6 +10,7 @@
   ];
 
   home.packages = with pkgs; [
+    nerdfonts
     feh             # Simple image viewer
     pavucontrol     # Volume control
     nemo-with-extensions
@@ -18,6 +19,7 @@
     drawing         # edit image files
     keymapp
     meld
+    vlc
     # zsa keyboards
   ];
 }
