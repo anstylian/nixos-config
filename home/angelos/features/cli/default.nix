@@ -50,5 +50,7 @@
     keyutils          # Tools used to control the Linux kernel key management system
 
     cloc              # Count Lines of Code
+
+    nix-tree
   ];
 }
