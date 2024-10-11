@@ -2,7 +2,6 @@
 { pkgs, inputs, outputs, ... }: {
   imports = [
     inputs.home-manager.nixosModules.home-manager
-    ./auditd.nix
     ./docker.nix
     ./podman.nix
     ./libvirt.nix
