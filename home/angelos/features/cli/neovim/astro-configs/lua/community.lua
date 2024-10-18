@@ -31,6 +31,7 @@ return {
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.nix" },
+  { import = "astrocommunity.pack.harper" },
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
   { import = "astrocommunity.editing-support.auto-save-nvim" },
   {

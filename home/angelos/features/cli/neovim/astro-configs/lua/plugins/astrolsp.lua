@@ -24,6 +24,7 @@ return {
 			"denols",
 			"ocamllsp",
 			"solidity",
+			"harper_ls",
 			"phpactor", -- mediawiki
 			-- add more servers as needed...
 		})

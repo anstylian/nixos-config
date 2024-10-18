@@ -86,6 +86,7 @@ in {
     deno
     lazygit
     gcc
+    harper
   ];
 
   xdg.dataHome = "${config.home.homeDirectory}/.data";
